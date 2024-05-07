@@ -20,9 +20,9 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              <a class="nav-link" href="/random">Random</a>
               <a class="nav-link" href="/r/chickens">Chickens</a>
               <a class="nav-link" href="/r/soccer">Soccer</a>
-              <a class="nav-link" href="/random">Random</a>
               <a class="nav-link" href="/r/mightyharvest">Mighty Harvest</a>
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </div>
@@ -30,8 +30,10 @@
         </div>
       </nav>
 
-    <h1>Your random number is: <%=rand%></h1>  <!-- Calculated in js file-->
-    <h2>This number is <%= rand%2===0 ? 'even!' : 'odd!' %></h2> <!--Calculated in the template-->
+      <div class="container">
+        <h1>Your random number is: <%=rand%></h1>  <!-- Calculated in js file-->
+        <h2>This number is <%= rand%2===0 ? 'even!' : 'odd!' %></h2> <!--Calculated in the template-->
+      </div>
 </body>
 
 </html>
