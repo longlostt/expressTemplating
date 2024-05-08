@@ -12,7 +12,6 @@ app.get('/home', (req, res) => {
     res.render('home');
 })
 
-
 app.get('/r/:subreddit', (req, res) => {
     const { subreddit } = req.params;
     const data = redditData[subreddit];
@@ -26,6 +25,10 @@ app.get('/r/:subreddit', (req, res) => {
 app.get('/random', (req, res) => {
     const rand = Math.floor(Math.random() * 100) + 1;
     res.render('random', { rand: rand }) // passing the variables to the template.
+})
+
+app.get('*', (req, res) => {
+    res.render('notfound');
 })
 
 
