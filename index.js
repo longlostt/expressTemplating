@@ -12,10 +12,6 @@ app.get('/home', (req, res) => {
     res.render('home');
 })
 
-app.get('/cats', (req,res) => {
-    const cats = ['Blue', 'Rocket', 'Monty', 'Stephanie', 'Broiler'];
-    res.render('cats', { cats })
-})
 
 app.get('/r/:subreddit', (req, res) => {
     const { subreddit } = req.params;
@@ -31,6 +27,7 @@ app.get('/random', (req, res) => {
     const rand = Math.floor(Math.random() * 100) + 1;
     res.render('random', { rand: rand }) // passing the variables to the template.
 })
+
 
 app.listen(3000, () => {
     console.log('server 3000');
